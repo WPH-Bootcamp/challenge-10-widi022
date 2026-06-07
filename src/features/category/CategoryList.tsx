@@ -17,7 +17,7 @@ const categories = [
   {
     label: "Discount",
     href: "/category?category=discount",
-    icon: "/images/Discount.png",
+    icon: "/images/discount.png",
   },
   {
     label: "Best Seller",
