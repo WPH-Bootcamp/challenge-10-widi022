@@ -4,7 +4,10 @@ export const registerSchema = z
   .object({
     name: z.string().min(3),
     email: z.string().email(),
-    phone: z.string(),
+    phone: z
+      .string()
+      .min(1, "phone number cannot be empty")
+      .regex(/^\d+$/, "phone must be a number"),
     password: z.string().min(6),
     confirmPassword: z.string(),
   })

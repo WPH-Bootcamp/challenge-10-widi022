@@ -97,7 +97,11 @@ export default function RegisterForm() {
       <Field
         label="Phone"
         error={form.formState.errors.phone?.message}
-        inputProps={form.register("phone")}
+        inputProps={{
+          ...form.register("phone"),
+          inputMode: "numeric",
+          autoComplete: "tel",
+        }}
       />
 
       <Field
